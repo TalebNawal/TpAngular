@@ -1,0 +1,25 @@
+<form style="display: flex; flex-direction: column; align-items: center;">
+  <mat-form-field style="width: 500px;">
+    <span>Nom</span>
+    <input matInput type="text" [(ngModel)]="nom" name="name" style="background-color: rgba(128, 128, 128, 0.089); width: 500px; height: 40px;" >
+  </mat-form-field>
+  <mat-form-field style="width: 500px; ">
+    <span>Prenom</span>
+    <input matInput type="text" [(ngModel)]="prenom" name="prenom" style="background-color: rgba(128, 128, 128, 0.089); width: 500px; height: 40px;">
+  </mat-form-field>
+  <mat-form-field style="width: 500px; ">
+      <span>Adresse electronique</span>
+      
+      <input matInput type="email" [(ngModel)]="email" name="email" style="background-color: rgba(128, 128, 128, 0.089); width: 500px; height: 40px;">
+    </mat-form-field>
+  <mat-form-field style="width: 500px; ">
+    <span>Mot de passe</span>
+    <input matInput type="password" [(ngModel)]="password" name="password" style="background-color: rgba(128, 128, 128, 0.089); width: 500px; height: 40px;">
+  </mat-form-field> 
+  <button mat-button type="submit" style="background-color: rgb(197, 197, 197); color: rgb(0, 0, 0); width: 300px; height: 40px; border-radius: 10px;" (click)="signUp()">
+      Enregistrer
+    </button>
+    <br/>
+    <a (click)="loginDir()">Se connecter </a>
+ 
+</form>

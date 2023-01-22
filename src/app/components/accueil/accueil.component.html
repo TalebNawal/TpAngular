@@ -1,0 +1,37 @@
+<!-- Header-->
+
+<form class="d-flex" role="search">
+  
+    <input class="form-control me-2" type="search" [(ngModel)]="word" placeholder="Chercher un produit" name="word" (ngModelChange)="search()" aria-label="Search">
+    
+  </form>
+<header class="bg-dark py-5">
+  
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+        <h1 class="display-4 fw-bolder">Promotion jusqu'à 50%</h1>
+        <p class="lead fw-normal text-white-50 mb-0">Source from 15 million products that are ready to ship, and leave the facility within 15 days.
+        </p>
+      </div>
+    </div>
+  </header>
+  <div>
+   
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Catégorie
+      </a>
+      <ul class="dropdown-menu">
+        <li class="cat" *ngFor="let category of categories" (click)="showCategory(category)" >{{category}}</li>
+       
+      </ul>
+    
+  </div>
+  <div class="container px-4 px-lg-5 mt-5">
+  
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+      <div class="col mb-3" *ngFor="let produit of produits">
+        <app-produit [produit]="produit"></app-produit>
+      </div>
+    </div>
+  </div>
+  

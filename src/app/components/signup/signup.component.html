@@ -1,0 +1,23 @@
+<form style="display: flex; flex-direction: column; align-items: center;">
+    <mat-form-field style="width: 500px;">
+    <br/>
+      <span>Adresse email</span>
+      <br/>
+      <input matInput type="email" [(ngModel)]="email" name="email" style="background-color: rgba(128, 128, 128, 0.089);  width: 500px; height: 40px;" >
+      <br/>
+    </mat-form-field>
+   
+    <mat-form-field style="width: 500px; ">
+        <br/>
+      <span>Mot de passe</span>
+      <br/>
+      <input matInput type="password" [(ngModel)]="password" name="password" style="background-color: rgba(128, 128, 128, 0.089); width: 500px; height: 40px;">
+    </mat-form-field>
+    <br/>
+    <button mat-button type="submit" style="background-color: rgb(197, 197, 197); color: rgb(0, 0, 0); width: 300px; height: 40px; border-radius: 10px;" (click)="login()">
+      Login
+    </button>
+    <br/>
+    <a (click)="signupDir()">Créer un compte </a>
+
+  </form>
